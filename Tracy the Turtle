@@ -1,0 +1,64 @@
+import turtle
+tracy = turtle.Turtle()
+
+# Draw stick man
+tracy.circle(25, 360)
+tracy.right(90)
+tracy.forward(20)
+tracy.left(40)
+tracy.forward(50)
+tracy.back(50)
+tracy.right(80)
+tracy.forward(50)
+tracy.back(50)
+tracy.left(40)
+tracy.forward(50)
+tracy.left(30)
+tracy.forward(70)
+tracy.back(70)
+tracy.right(60)
+tracy.forward(70)
+
+# Draw ground
+tracy.penup()
+tracy.setheading(0)
+tracy.goto(-320, -170)
+tracy.pendown()
+tracy.forward(20)
+for i in range(3):
+    tracy.left(45)
+    tracy.forward(20)
+    tracy.back(20)
+tracy.setheading(0)
+tracy.forward(250)
+tracy.left(90)
+tracy.forward(50)
+
+# Draw corner sun
+tracy.penup()
+tracy.setheading(0)
+tracy.goto(-320, 150)
+tracy.pendown()
+for i in range(6):
+    tracy.right(90)
+    tracy.forward(50)
+    tracy.back(50)
+    tracy.left(90)
+    tracy.circle(50, 15)
+tracy.right(90)
+tracy.forward(50)
+
+# Draw bird
+tracy.penup()
+tracy.goto(110, 135)
+tracy.pendown()
+tracy.right(60)
+tracy.circle(50, 45)
+tracy.penup()
+tracy.goto(110, 135)
+tracy.pendown()
+tracy.setheading(60)
+tracy.circle(50, -45)
+
+# Keep drawing window open
+turtle.done()
